@@ -13,14 +13,20 @@ async function main() {
   // manually to make sure everything is compiled
   // await hre.run('compile');
 
-  // We get the contract to deploy
+  // We get the contract to deploy  
+  const TokenProxy = await hre.ethers.getContractFactory("TokenProxy");
+  const TokenProxyInstance = await TokenProxy.deploy(
+    "0x2b51ff0889a3a47085bebCc61759923Ae8DE31f6",
+    "Wrapped Ropsten Ether on GU",
+    "WETH",
+    18,
+    3
+  );
+
+  await TokenProxyInstance.deployed();
+
+  console.log("TokenProxy deployed to:", TokenProxyInstance.address);
   
-  const WETHOmnibridgeRouter = await hre.ethers.getContractFactory("WETHOmnibridgeRouter");
-  const WETHOmnibridgeRouterInstance = await WETHOmnibridgeRouter.deploy("0xF1b5cc67c911F67cCC4021C22241AC7c21CB43C8", "0xc778417E063141139Fce010982780140Aa0cD5Ab", "0x48a1ebb823eba4940395ddca05b6705b3ec8755b");
-
-  await WETHOmnibridgeRouterInstance.deployed();
-
-  console.log("WETHOmnibridgeRouter deployed to:", WETHOmnibridgeRouterInstance.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere

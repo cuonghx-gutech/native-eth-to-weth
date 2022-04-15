@@ -16,8 +16,13 @@ npx hardhat help
 
 Results:
 
-- WETHOmnibridgeRouter on Ropsten: 0x377140BDb617a51527070E46c619b4Ac721C7008
-- WETH on Ropsten: 0xE5e6a2991EbAeA4933E431Da0dE223DF7fa61906
-- WETH of Ropsten on gu sandbox:
+Ropsten
+
+- WETHOmnibridgeRouter on Ropsten: 0x2e407Cfc7D009621113DC2DeC7C302D533E687B9
+- WETH on Ropsten: 0xc778417E063141139Fce010982780140Aa0cD5Ab
+
+- WETH of Ropsten on gu sandbox: 0x7Ad873bEe49696C32bBB8B388B5D9eB7c36FD87E
 
 [impl]: 0x2b51ff0889a3a47085bebCc61759923Ae8DE31f6
+
+---
